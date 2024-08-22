@@ -1,0 +1,20 @@
+1. Idempotent là những API được gọi nhiều lần nhưng chả thay đổi gì
+ví dụ: 
+PUT /items/123
+{
+  "name": "item1",
+  "quantity": 10
+}
+
+=> update lại liên tục nhưng giống nhau nên chả có gì thay đổi
+
+
+2. UnIdempotent ngược lại
+
+POST /items
+{
+  "name": "item1",
+  "quantity": 10
+}
+
+=> tạo ra bản ghi mới
